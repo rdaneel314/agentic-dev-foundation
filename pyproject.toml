@@ -1,0 +1,13 @@
+[project]
+name = "agentic-dev-foundation"
+version = "0.0.0"
+description = "Portable engineering foundation; not an installable application"
+requires-python = ">=3.13,<3.14"
+dependencies = []
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+
+[tool.foundation]
+dependency-input = "requirements-ci.txt"
+dependency-lock = "requirements-ci.lock"
+verification = "python scripts/check_foundation.py"

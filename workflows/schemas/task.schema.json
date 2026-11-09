@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Portable bounded task",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "task_id",
+    "objective",
+    "role",
+    "state",
+    "base_commit",
+    "data_class",
+    "allowed_paths",
+    "acceptance",
+    "external_effects",
+    "timeout_seconds",
+    "authorization_ref",
+    "next_action"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "objective": {
+      "type": "string",
+      "minLength": 1
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "coordinator",
+        "product",
+        "architect",
+        "engineering",
+        "reviewer",
+        "qa",
+        "security",
+        "human"
+      ]
+    },
+    "state": {
+      "type": "string",
+      "enum": [
+        "RECEIVED",
+        "REQUIREMENTS_READY",
+        "DESIGN_READY",
+        "IMPLEMENTED",
+        "INDEPENDENT_REVIEW",
+        "VERIFIED",
+        "AWAITING_HUMAN",
+        "ACCEPTED",
+        "REJECTED",
+        "BLOCKED",
+        "REWORK"
+      ]
+    },
+    "base_commit": {
+      "type": "string",
+      "pattern": "[0-9a-f]{40}|[0-9a-f]{64}|NO_GIT_YET"
+    },
+    "data_class": {
+      "type": "string",
+      "enum": [
+        "public",
+        "synthetic"
+      ]
+    },
+    "allowed_paths": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "acceptance": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "external_effects": {
+      "type": "string",
+      "enum": [
+        "none"
+      ]
+    },
+    "timeout_seconds": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "authorization_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "next_action": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

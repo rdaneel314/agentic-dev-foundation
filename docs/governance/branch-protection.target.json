@@ -1,0 +1,45 @@
+{
+  "state": "PREPARED_NOT_APPLIED",
+  "branch": "main",
+  "preconditions": [
+    "Final explicit publication/settings confirmation",
+    "Independent AI review/QA/security evidence and human oversight",
+    "Observed hosted check contexts and source app ID"
+  ],
+  "request_template": {
+    "required_status_checks": {
+      "strict": true,
+      "checks": [
+        {
+          "context": "foundation-checks (ubuntu-24.04)",
+          "app_id": "UNRESOLVED_OBSERVED_GITHUB_ACTIONS_APP_ID"
+        },
+        {
+          "context": "foundation-checks (windows-latest)",
+          "app_id": "UNRESOLVED_OBSERVED_GITHUB_ACTIONS_APP_ID"
+        }
+      ]
+    },
+    "enforce_admins": true,
+    "required_pull_request_reviews": {
+      "dismiss_stale_reviews": false,
+      "require_code_owner_reviews": false,
+      "required_approving_review_count": 0,
+      "require_last_push_approval": false
+    },
+    "restrictions": null,
+    "required_linear_history": false,
+    "allow_force_pushes": false,
+    "allow_deletions": false,
+    "block_creations": false,
+    "required_conversation_resolution": true,
+    "lock_branch": false,
+    "allow_fork_syncing": false
+  },
+  "limits": [
+    "Classic fallback only; do not layer with stale one-human-approval rules",
+    "Actual source app ID unresolved until hosted run",
+    "AI/QA/security attestations are human-verified, not native human review approvals",
+    "Owner-only upstream authority; no agent write/admin permission"
+  ]
+}

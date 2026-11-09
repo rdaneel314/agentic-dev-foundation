@@ -1,0 +1,44 @@
+name: Foundation CI
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: foundation-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  foundation-checks:
+    name: foundation-checks (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, windows-latest]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.13'
+      - name: Install pinned tools
+        run: 'python -m pip install --only-binary=:all: --require-hashes -r requirements-ci.lock'
+      - name: Verify dependency compatibility
+        run: python -m pip check
+      - name: Verify lock and tools
+        run: python scripts/check_dependencies.py
+      - name: Validate foundation
+        run: python scripts/check_foundation.py
+      - name: Run behavioral tests
+        run: python -m unittest discover -s tests -v
+      - name: Validate YAML and CI
+        run: python scripts/check_yaml.py
+      - name: Scan current public files
+        run: python scripts/scan_secrets.py
+      - name: Audit locked dependencies
+        run: python -m pip_audit --strict --disable-pip --no-deps -r requirements-ci.lock

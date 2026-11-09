@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Cross role finding",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "finding_id",
+    "task_id",
+    "reporter_id",
+    "reporter_role",
+    "affected_artifact",
+    "severity",
+    "summary",
+    "evidence_ref",
+    "owner_role",
+    "blocking",
+    "status",
+    "disposition",
+    "verified_by"
+  ],
+  "properties": {
+    "finding_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reporter_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reporter_role": {
+      "type": "string",
+      "enum": [
+        "coordinator",
+        "product",
+        "architect",
+        "engineering",
+        "reviewer",
+        "qa",
+        "security",
+        "human"
+      ]
+    },
+    "affected_artifact": {
+      "type": "string",
+      "minLength": 1
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "critical",
+        "high",
+        "medium",
+        "low",
+        "info"
+      ]
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "owner_role": {
+      "type": "string",
+      "enum": [
+        "coordinator",
+        "product",
+        "architect",
+        "engineering",
+        "reviewer",
+        "qa",
+        "security",
+        "human"
+      ]
+    },
+    "blocking": {
+      "type": "boolean"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "open",
+        "in_progress",
+        "resolved"
+      ]
+    },
+    "disposition": {
+      "type": "string"
+    },
+    "verified_by": {
+      "type": "string"
+    }
+  }
+}

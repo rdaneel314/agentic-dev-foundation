@@ -1,0 +1,18 @@
+{
+  "task_id": "SYNTHETIC-01",
+  "objective": "Review a synthetic document",
+  "role": "reviewer",
+  "state": "RECEIVED",
+  "base_commit": "NO_GIT_YET",
+  "data_class": "synthetic",
+  "allowed_paths": [
+    "docs"
+  ],
+  "acceptance": [
+    "Report broken links"
+  ],
+  "external_effects": "none",
+  "timeout_seconds": 60,
+  "authorization_ref": "synthetic-local-only",
+  "next_action": "Return a safe finding record"
+}

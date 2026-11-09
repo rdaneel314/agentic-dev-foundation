@@ -1,0 +1,15 @@
+{
+  "finding_id": "SYNTHETIC-F01",
+  "task_id": "SYNTHETIC-01",
+  "reporter_id": "synthetic-qa",
+  "reporter_role": "qa",
+  "affected_artifact": "synthetic-document-v1",
+  "severity": "medium",
+  "summary": "Synthetic acceptance criterion missing",
+  "evidence_ref": "synthetic-local-record",
+  "owner_role": "product",
+  "blocking": true,
+  "status": "open",
+  "disposition": "",
+  "verified_by": ""
+}
