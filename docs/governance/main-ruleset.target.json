@@ -1,5 +1,5 @@
 {
-  "state": "PREPARED_NOT_APPLIED",
+  "state": "MAIN_POLICY_APPLIED_SOURCE_OBSERVED",
   "request_template": {
     "name": "main-foundation",
     "target": "branch",
@@ -42,16 +42,16 @@
           "required_status_checks": [
             {
               "context": "foundation-checks (ubuntu-24.04)",
-              "integration_id": "UNRESOLVED_OBSERVED_GITHUB_ACTIONS_APP_ID"
+              "integration_id": 15368
             },
             {
               "context": "foundation-checks (windows-latest)",
-              "integration_id": "UNRESOLVED_OBSERVED_GITHUB_ACTIONS_APP_ID"
+              "integration_id": 15368
             }
           ]
         }
       }
     ]
   },
-  "unresolved": "Verify contexts and replace source integration ID with observed integer before application"
+  "evidence": "Observed successful bootstrap run 42719200940 and active main-foundation ruleset. Live ruleset also protects the disposable m1-governance-probe branch; this reusable target lists main only. See docs/records/0004-m1-publication.md."
 }
