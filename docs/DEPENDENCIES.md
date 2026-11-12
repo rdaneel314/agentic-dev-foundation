@@ -12,7 +12,7 @@ python -m pip check
 python scripts/check_dependencies.py
 ```
 
-Only wheels are allowed; no implicit source build dependencies. SHA hashes protect distribution identity relative to the reviewed lock, not publisher trust or installed-file integrity. Different OS/architecture wheel availability and a fresh installation still require real execution. Marker/constraint checks cover Windows, Linux and macOS Python 3.13 contexts; they are not runtime tests on those systems. Hosted OS images and Python patch releases are mutable.
+Only wheels are allowed; no implicit source build dependencies. SHA hashes protect distribution identity relative to the reviewed lock, not publisher trust or installed-file integrity. Fresh hash-locked installation succeeded on hosted Windows and Ubuntu during M1 bootstrap; the owner's second physical PC and other OS/architecture combinations remain untested. Marker/constraint checks cover Windows, Linux and macOS Python 3.13 contexts; they are not runtime tests on those systems. Hosted OS images and Python patch releases are mutable.
 
 The existing tools were reused without modification. No installation occurred in M0. Vulnerability auditing uses the exact lock with `--disable-pip --no-deps`; it queries advisory metadata without installing/resolving packages. Findings or service failures block that audit, and results age as advisories change.
 

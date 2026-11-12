@@ -5,7 +5,7 @@ This file owns milestones; [backlog](docs/backlog.md) preserves P1 task IDs and 
 | Milestone | Scope | Exit evidence | Status |
 | --- | --- | --- | --- |
 | M0 | Portable local foundation | Reconciled public/private boundary; instructions, schemas, checks, provenance and preservation evidence | Provisionally accepted; verification limits retained |
-| M1 / P1-03 | Protected GitHub foundation | Approved payload/license; authorized public remote; actual required CI checks; independent reviewer; rejection cases; clean clone and computer-switch evidence | Revised licensed candidate prepared; final explicit publication confirmation pending; live protections/CI/portability unverified |
+| M1 / P1-03 | Protected GitHub foundation | Approved payload/license; authorized public remote; actual required CI checks; independent reviewer; rejection cases; clean clone and computer-switch evidence | Approved initial commit published; hosted Windows/Ubuntu installation and CI passed; active protections and negative cases observed. Status PR acceptance, clean protected merge and owner's second-PC transfer remain pending |
 | M2 / P1-04/07/08/12/15 | One sequential synthetic workflow | Temporal/Python with fake model Activities; bounded retries, crash/replay, side-effect deduplication, stale/self-approval rejection and authenticated human gate design | Not implemented |
 | M3 / P1-05/06/09/13/14 | Bounded cloud execution | Authorized disposable worker, durable task/evidence state, temporary permissions, isolation negative tests, verified cleanup and approved cost exposure | Deferred |
 | M4 / P1-16 | Synthetic end-to-end pilot | Roles pass one task through independent review, QA/security, repair/recovery and human decision | Deferred |

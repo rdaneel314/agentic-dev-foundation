@@ -1,6 +1,6 @@
 # CI scope and verification commands
 
-Prepared Foundation CI has Windows and Ubuntu jobs with Python 3.13, ten-minute timeouts, read-only contents permission and full-SHA-pinned checkout/Python setup. Checkout does not persist credentials. No stored secrets, deployments, privileged PR trigger, self-hosted runner or model call is configured. Actual hosted execution and emitted check names remain unverified.
+Foundation CI has Windows and Ubuntu jobs with Python 3.13, ten-minute timeouts, read-only contents permission and full-SHA-pinned checkout/Python setup. Checkout does not persist credentials. No stored secrets, deployments, privileged PR trigger, self-hosted runner or model call is configured. Bootstrap hosted execution succeeded on both operating systems, including fresh locked installation and 29 tests. The emitted names are foundation-checks (ubuntu-24.04) and foundation-checks (windows-latest), from GitHub Actions integration 15368; both are required on main. See [live verification](records/0004-m1-publication.md).
 
 From the public root with the pinned tools interpreter, run:
 

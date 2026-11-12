@@ -1,6 +1,6 @@
 # M1 sole owner protection targets
 
-Target: public personal-Free repository, main branch, one human owner. Configuration remains prepared until final publication confirmation. Public Free supports branch rulesets and classic protections under current GitHub documentation.
+Target: public personal-Free repository, main branch, one human owner. Owner-authorized publication and one active branch ruleset are now observed. Public Free supports these rules. See [live verification](../records/0004-m1-publication.md) for exact results and remaining limits; the classic file remains an unapplied fallback.
 
 ## Preferred active main ruleset
 
@@ -18,7 +18,7 @@ Before every consequential merge, the human checks independent AI review, QA and
 
 The owner can edit settings and merge after native conditions pass; personal Free does not offer every organization-only actor restriction. Keep coding agents without upstream write/admin authority. A compromised human credential remains outside immutable enforcement. CI can be changed by PR code: independently inspect governance/CI changes and actual successful job conclusions, including no skipped or neutral substitute.
 
-## Verify only after final publication confirmation
+## Verification procedure and recorded results
 
 1. Independently reviewed bootstrap import under human control, then actual hosted CI. Record contexts, source integration, run and commit; resolve placeholders.
 2. Apply one selected active protection strategy and read it back: PR required, approval count zero, last-push/code-owner false, strict two-source checks, conversations, no bypass and force/deletion disabled.

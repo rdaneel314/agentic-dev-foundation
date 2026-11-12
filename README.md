@@ -26,10 +26,10 @@ python -m unittest discover -s tests -v
 python scripts/check_foundation.py
 ```
 
-Prepared Windows/Ubuntu CI also validates YAML and dependency closure, checks secrets and audits locked dependencies. See [CI scope](docs/ci.md) and [dependencies](docs/DEPENDENCIES.md). Passing scaffold checks do not demonstrate a functioning multi-agent system or independent execution authority.
+Hosted Windows/Ubuntu CI also validates YAML and dependency closure, checks secrets and audits locked dependencies. See [CI scope](docs/ci.md) and [dependencies](docs/DEPENDENCIES.md). Passing scaffold checks do not demonstrate a functioning multi-agent system or independent execution authority.
 
 Engineering cannot approve its own work. Independent review and passing checks precede the human merge decision. No agent may change its own permissions, launch paid resources or deploy to production.
 
 Licensed under [Apache-2.0](LICENSE). Project owner: rdaneel314; see [NOTICE](NOTICE). Only public-safe generic source and synthetic material belong here.
 
-Current state: final local publication candidate, awaiting the human owner's explicit confirmation to publish. No remote, hosted CI, branch protection or cloud isolation is claimed verified. The sole human owner uses independent AI review, QA and security evidence, then makes the final decision. GitHub requires PRs, checks and conversation resolution; it will not require an unavailable second human approval. See the [governance model](docs/governance.md).
+Current state: the approved initial snapshot is public, hosted Windows/Ubuntu CI passed, and main protections and negative cases are observed. This separate status change still requires independent assessment and protected-PR acceptance; the owner's second-PC transfer remains unverified. The sole human owner uses mandatory independent AI review, QA and security evidence, then makes the final decision. GitHub requires PRs, checks and conversation resolution with zero required human approvals. AI attestations are not authenticated by GitHub, and no cloud isolation is claimed. See [live results](docs/records/0004-m1-publication.md) and the [governance model](docs/governance.md).
